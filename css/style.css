@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Cursive;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  justify-content: center;
+  place-items: center;
+  background: linear-gradient(to right, #D4145A, #FBB03B);
+}
+
+.calendar {
+  height: 30rem;
+  width: max-content;
+  padding: 30px 50px 0 50px;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.calendar-header {
+  display: flex;
+  padding: 10px;
+  color: #ffffff;
+  background: #F28C28;
+  font-weight: bold;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.calendar-body {
+  padding: 10px;
+}
+
+.calendar-week-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.calendar-week-days div {
+  display: grid;
+  place-items: center;
+  color: #FF5F15;
+  height: 50px;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  color: #000;
+}
+
+.calendar-days div {
+  display: flex;
+  width: 45px;
+  height: 35px;
+  padding: 5px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.month-picker {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.year-picker {
+  display: flex;
+  align-items: center;
+}
+
+.year-change {
+  display: grid;
+  height: 30px;
+  width: 30px;
+  font-size: 20px;
+  place-items: center;
+  margin: 0 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.year-change:hover {
+  background-color: #FF5F15;
+}
+
+.calendar-days div span {
+  position: absolute;
+}
+
+.calendar-days div:hover {
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+  background-color: #fbc7d4;
+  border-radius: 20%;
+  color: #f8fbff;
+}
+
+.calendar-days div.current-date {
+  color: #f8fbff;
+  background-color: #FF5F15;
+  border-radius: 20%;
+}
+
+.date-time-formate {
+  position: relative;
+  display: flex;
+  top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.day-text-formate {
+  font-size: 25px;
+  padding-right: 15px;
+  border-right: 5px solid #fbc7d4;
+}
+
+.date-time-value {
+  text-align: center;
+  padding-left: 5%;
+}
